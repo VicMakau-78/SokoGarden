@@ -1,6 +1,8 @@
 package com.example.sokogardenapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,19 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+//        find the buttons by Id
+        val SignUpButton = findViewById<Button>(R.id.signupBtn)
+        val SignInButton = findViewById<Button>(R.id.signinBtn)
+
+//        Create the intents to the two activities
+        SignUpButton.setOnClickListener {
+            val intent = Intent(applicationContext, SignUp::class.java)
+            startActivity(intent)
+        }
+        SignInButton.setOnClickListener {
+            val intent = Intent(applicationContext, SignIn::class.java)
+            startActivity(intent)
         }
     }
 }
