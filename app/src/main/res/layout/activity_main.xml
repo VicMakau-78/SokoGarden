@@ -12,8 +12,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SokoGarden"
+        android:text="❇️SokoGarden❇️"
         android:textSize="38sp"
+        android:fontFamily="cursive"
         android:textAlignment="center"
         android:textStyle="bold|italic"
         android:background="@drawable/shape"
@@ -28,10 +29,11 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign-Up"
+            android:text="👤 Signup"
+            android:fontFamily="sans-serif-condensed"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
             android:textColor="#F44336"
             android:backgroundTint="#212"
@@ -40,14 +42,64 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign-In"
+            android:text="🪪 Signin"
+            android:fontFamily="sans-serif-condensed"
             android:textSize="25sp"
             android:padding="10dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="8dp"
             android:textColor="#F44336"
             android:backgroundTint="#212"
             android:id="@+id/signinBtn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜About"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#F44336"
+            android:backgroundTint="#051232"
+            android:id="@+id/aboutBtn" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#ED0909"
+            android:textColor="#F2F2F2"
+            android:visibility="gone"/>
+
     </LinearLayout>
+
+<!--    Below is our progressbar-->
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar" />
+
+<!--    Below is our recyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerview"
+        tools:listitem="@layout/single_item" />
 
 </LinearLayout>

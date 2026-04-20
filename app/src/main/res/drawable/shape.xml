@@ -4,12 +4,12 @@
 
     <solid
 
-        android:color="#FF9800"/>
+        android:color="#C17E1B"/>
 
     <corners
 
         android:topRightRadius="500dp"
-
+        android:bottomLeftRadius="500dp"
         android:radius="30dp"
         />
 
